@@ -1,0 +1,20 @@
+{
+	"type": "module",
+	"name": "hoe-server",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start": "node --es-module-specifier-resolution=node ./src/index.js",
+		"dev": "nodemon --es-module-specifier-resolution=node ./src/index.js"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"fastify": "^4.4.0",
+		"fastify-plugin": "^4.1.0",
+		"mercurius": "^10.1.0",
+		"mongoose": "^6.5.2",
+		"nodemon": "^2.0.19"
+	}
+}
