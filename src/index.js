@@ -1,3 +1,4 @@
+import cors from "@fastify/cors";
 import db from "./config/index";
 import fastify from "fastify";
 import mercurius from "mercurius";
@@ -11,6 +12,10 @@ const app = fastify({ logger: true });
 
 // Activate plugins below:
 
+app.register(cors, {
+	origin: "*",
+	methods: ["GET", "POST", "PUT", "DELETE"]
+});
 app.register(db, { uri });
 app.register(mercurius, {
 	schema,
